@@ -18,21 +18,19 @@ const car = {
 
 console.log (car.properties);
 
-function LoveringDistance (t , averagespeed){
-    const StartTime = 0;
-    const EndTime = t; //не читает переменную//
+function LoveringDistance (distance , averagespeed){
+    const result = distance / averagespeed;
 
-    /*let i = 1;
-    for (let i = StartTime, i = EndTime , EndTime++);
-    if (i % 4 === 0);
-    console.log( i);*/
-    if ((typeof t === "number") && 
-    (typeof EndTime === "number"));
-    return (averagespeed * t);
+    if (result > 4) {
+        const correction = Math.trunc(result / 4);
+        return result + correction;
+
+    }
+    return result;
 
 }
 
-console.log(LoveringDistance( 6 ) ); //не сделала //
+console.log(LoveringDistance( 375, 75 ) ); 
 
     
 
